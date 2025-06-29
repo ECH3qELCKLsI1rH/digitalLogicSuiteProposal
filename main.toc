@@ -1,11 +1,10 @@
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
-\contentsline {section}{\numberline {2}Objectives}{4}{section.2}%
-\contentsline {section}{\numberline {3}Existing System}{4}{section.3}%
-\contentsline {section}{\numberline {4}Proposed System}{5}{section.4}%
-\contentsline {section}{\numberline {5}Description}{5}{section.5}%
-\contentsline {section}{\numberline {6}System Block Diagram}{5}{section.6}%
-\contentsline {section}{\numberline {7}Methodology}{5}{section.7}%
-\contentsline {section}{\numberline {8}Project Scope}{6}{section.8}%
-\contentsline {section}{\numberline {9}Project Schedule}{6}{section.9}%
-\contentsline {section}{\numberline {10}Libraries and Tools}{7}{section.10}%
-\contentsline {section}{\numberline {11}Header Files List}{7}{section.11}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Objectives}{3}{section.2}%
+\contentsline {section}{\numberline {3}Existing Systems}{3}{section.3}%
+\contentsline {section}{\numberline {4}Proposed System}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Description}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}System Block Diagram}{5}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Methodology}{5}{section.5}%
+\contentsline {section}{\numberline {6}Project Scope}{5}{section.6}%
+\contentsline {section}{\numberline {7}Project Schedule}{6}{section.7}%
+\contentsline {section}{\numberline {8}Libraries and Tools}{6}{section.8}%

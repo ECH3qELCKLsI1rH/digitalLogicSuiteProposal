@@ -55,26 +55,25 @@
     pdfsubject={Project Proposal}
 }
 
+% --- Customizing Table of Contents ---
+\renewcommand{\contentsname}{Table of Contents}
+
 % --- Document Start ---
 \begin{document}
 
 % --- Title Page ---
-\begin{center}
-    \vspace*{2cm}
-    {\LARGE \textbf{Digital Logic Suite Proposal}}\\[2cm]
-    \textbf{Academic Project Proposal}\\[1cm]
-    \vfill
-    \textbf{Department of Electronics and Communication Engineering}\\
-    \textbf{IOE, Pulchowk Campus}\\
-    \textbf{July 1, 2025}\\
-    \vspace*{2cm}
-\end{center}
-\thispagestyle{empty}
-\newpage
+% Title page
+\include{sections/title} % Ensure titlepage.tex exists
+\clearpage
 
 % --- Acknowledgment ---
 \section*{Acknowledgment}
-We would like to express our sincere gratitude to our project supervisor, faculty members, and peers for their invaluable guidance and support throughout the development of the Digital Logic Suite project. Their encouragement and constructive feedback have been instrumental in shaping the direction and scope of this proposal.
+
+We would like to express our sincere gratitude to our supervisor, \textbf{Mr. Daya Sagar Baral}, Faculty Member, Department of Electronics and Computer Engineering, IOE Pulchowk Campus, for his continuous guidance, invaluable suggestions, and encouragement throughout the development of this project.
+
+This project, \textbf{Digital Logic Suite}, has been carried out as part of the subject \textbf{Object-Oriented Programming with C++}, and it would not have been possible without the support provided by our supervisor. His expertise and insights have greatly contributed to the successful design and implementation of this project.
+
+We would also like to acknowledge the Department of Electronics and Computer Engineering at Pulchowk Campus for providing the resources and environment necessary for the completion of this work.
 
 \newpage
 
@@ -84,30 +83,43 @@ We would like to express our sincere gratitude to our project supervisor, facult
 
 % --- Introduction ---
 \section{Introduction}
-Digital logic design is fundamental to computer engineering and electronics. The Digital Logic Suite aims to provide a comprehensive, command-line-based toolkit for parsing and evaluating Boolean expressions, generating truth tables, minimizing logic using Karnaugh maps, simulating digital circuits, and visualizing logic structures. The suite leverages C++ object-oriented programming concepts and integrates with Graphviz for graphical representation.
+Digital logic design is fundamental to computer engineering and electronics. The Digital Logic Suite aims to provide a comprehensive, command-line-based toolkit for parsing and evaluating Boolean expressions, generating truth tables, minimizing logic using Karnaugh maps, simulating digital circuits, and visualizing logic structures. The suite uses C++ object-oriented programming concepts and integrates with Graphviz for graphical representation.
 
 % --- Objectives ---
 \section{Objectives}
-\begin{itemize}
-    \item Develop a robust CLI tool for digital logic analysis and simulation.
+\renewcommand{\labelenumi}{\roman{enumi}.}
+\begin{enumerate}
+    \item Develop a powerful CLI tool for digital logic analysis and simulation.
     \item Implement Boolean expression parsing and evaluation.
     \item Generate truth tables for arbitrary Boolean expressions.
     \item Perform Karnaugh map minimization for logic simplification.
     \item Simulate digital circuits based on user-defined logic.
     \item Visualize logic circuits and truth tables using Graphviz.
-    \item Demonstrate effective use of C++ OOP principles.
-\end{itemize}
+    \item Demonstrate use of OOP principles using C++.
+\end{enumerate}
+
 
 % --- Existing System (if any) ---
-\section{Existing System}
-Several tools exist for digital logic simulation and analysis, such as Logisim and online Boolean calculators. However, most are GUI-based and lack extensibility or CLI integration. Few open-source solutions provide a unified command-line interface with advanced features like expression parsing, minimization, and circuit visualization tailored for educational and research purposes.
+\section{Existing Systems}
+Several existing tools provide digital logic design, analysis, and simulation functionalities. Some notable systems include:
+\renewcommand{\labelenumi}{\roman{enumi}.}
+\begin{enumerate}
+    \item \textbf{Logisim}: A user-friendly interface for building digital logic systems but lacks command-line capabilities.
+
+    \item \textbf{Digital Works}: Supports circuit construction and basic simulation, but does not provide features for Boolean expression parsing or Karnaugh map minimization.
+
+    \item \textbf{Logic Friday}: A Windows-based application for simplifying and analyzing Boolean equations, generating truth tables, and Karnaugh maps but, limited to a GUI environment.
+\end{enumerate}
+
+Despite the availability of these tools, there is a lack of a lightweight, extensible, command-line-based tool designed specifically for learning, experimenting with, and automating digital logic analysis. This gap inspired us for the development of \textbf{Digital Logic Suite} project.
+
 
 % --- Proposed System ---
 \section{Proposed System}
 The proposed Digital Logic Suite is a modular, extensible CLI application written in C++. It supports parsing Boolean expressions, generating truth tables, Karnaugh map minimization, circuit simulation, and Graphviz-based visualization. The system is designed for ease of use, extensibility, and integration into academic workflows.
 
 % --- Description ---
-\section{Description}
+\subsection{Description}
 The suite consists of several core modules:
 \begin{itemize}
     \item \textbf{CLI Module:} Handles user input, command parsing, and help documentation.
@@ -120,7 +132,7 @@ The suite consists of several core modules:
 The suite is implemented using C++ OOP concepts, with each module encapsulated as a class or set of classes.
 
 % --- System Block Diagram ---
-\section{System Block Diagram}
+\subsection{System Block Diagram}
 \begin{figure}[ht!]
     \centering
     % Placeholder for system block diagram
@@ -147,6 +159,7 @@ The project will follow an iterative, modular development approach:
 The Digital Logic Suite is intended for academic and educational use. It focuses on combinational logic analysis, minimization, and simulation. Sequential logic and hardware synthesis are outside the current scope but may be considered for future extensions.
 
 % --- Project Schedule ---
+\newpage
 \section{Project Schedule}
 \begin{table}[h!]
     \centering
@@ -168,6 +181,7 @@ The Digital Logic Suite is intended for academic and educational use. It focuses
     \caption{Project Schedule for Digital Logic Suite}
 \end{table}
 
+
 % --- Libraries and Tools ---
 \section{Libraries and Tools}
 \begin{itemize}
@@ -176,35 +190,5 @@ The Digital Logic Suite is intended for academic and educational use. It focuses
     \item \textbf{Visual Studio:} Development environment.
     \item \textbf{Git:} Version control and collaboration.
 \end{itemize}
-
-% --- Header Files List ---
-\section{Header Files List}
-The following C++ header files will be used throughout the project:
-\begin{verbatim}
-#include <iostream>
-#include <string>
-#include <vector>
-#include <map>
-#include <algorithm>
-#include <stack>
-#include <queue>
-#include <set>
-#include <fstream>
-#include <sstream>
-\end{verbatim}
-
-% --- Placeholders for Appendices, Class Diagrams, Sample Outputs ---
-\section*{Appendices}
-% Add appendices here as needed.
-
-\section*{Class Diagrams}
-% Insert class diagrams here (use \includegraphics if available).
-
-\section*{Sample Outputs}
-% Add sample outputs or screenshots here.
-
-% --- References ---
-\bibliographystyle{plain}
-\bibliography{references}
 
 \end{document}

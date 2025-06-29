@@ -14,21 +14,6 @@ The Digital Logic Suite is an academic project designed to provide a comprehensi
 - **Graphviz-based Visualization**
 - **Use of C++ OOP Concepts**
 
-## C++ Header Files Used
-
-```
-#include <iostream>
-#include <string>
-#include <vector>
-#include <map>
-#include <algorithm>
-#include <stack>
-#include <queue>
-#include <set>
-#include <fstream>
-#include <sstream>
-```
-
 ## Libraries and Tools
 
 - **C++ Standard Template Library (STL)**
@@ -54,7 +39,7 @@ The Digital Logic Suite is an academic project designed to provide a comprehensi
 
 ## LaTeX Formatting Requirements
 
-- **Font:** Times New Roman (via `mathptmx` or `times` package)
+- **Font:** Times New Roman (via `mathptmx` package)
 - **Font Size:** 12pt
 - **Line Spacing:** 1.5
 - **Paper Size:** A4
@@ -65,15 +50,9 @@ The Digital Logic Suite is an academic project designed to provide a comprehensi
   - Heading 2: 16pt, bold
   - Heading 3: 14pt, bold
   - Heading 4: 13pt, bold
-- **Table of Contents:** Automatically generated with `\tableofcontents`
-- **Packages Used:** `geometry`, `graphicx`, `hyperref`, `setspace`, `fancyhdr`, `mathptmx` or `times`, `titlesec`
-- **System Block Diagram:** Placeholder image at `images/system_block_diagram.png`
-- **References:** Use `references.bib` (empty for now)
 
-## How to Compile
+## Authors
 
-1. Ensure all files are in the correct directories as shown above.
-2. Use a LaTeX editor or command-line tool to compile `main.tex`.
-3. Add your content, diagrams, and references as the project progresses.
-
----
+- **Nabaraj Bhandari**
+- **Nikunj Bhusal**
+- **Dhiraj Shreshta**
