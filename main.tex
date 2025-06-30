@@ -31,9 +31,6 @@
 % --- Header, Footer, and Section Titles ---
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{Digital Logic Suite}
-\fancyhead[R]{Project Proposal}
 \fancyfoot[C]{\thepage}
 
 \usepackage{titlesec}
@@ -42,7 +39,7 @@
 \titleformat{\subsection}
   {\normalfont\bfseries\fontsize{16}{19}\selectfont}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}
-  {\normalfont\bfseries\fontsize{14}{17}\selectfont}{\thesubsubsection}{1em}{}
+  {\normalfont\bfseries\fontsize{14}{17}\selectfont}{\theparagraph}{1em}{}
 \titleformat{\paragraph}[runin]
   {\normalfont\bfseries\fontsize{13}{15}\selectfont}{\theparagraph}{1em}{}
 
@@ -57,21 +54,25 @@
     pdfsubject={Project Proposal}
 }
 
-% --- Table of Contents ---
-\renewcommand{\contentsname}{Table of Contents}
-
 % --- Document ---
 \begin{document}
 
 \include{sections/titlePage}
 \clearpage
 
-\include{sections/acknowledgement}
+\pagenumbering{roman}
+\phantomsection
+\addcontentsline{toc}{section}{Acknowledgement}
+\input{sections/acknowledgement}
 \clearpage
 
+\phantomsection
+\addcontentsline{toc}{section}{Table of Contents}
+\renewcommand{\contentsname}{Table of Contents}
 \tableofcontents
 \clearpage
 
+\pagenumbering{arabic}
 \input{sections/introduction}
 \input{sections/objectives}
 \input{sections/existingSystems}
