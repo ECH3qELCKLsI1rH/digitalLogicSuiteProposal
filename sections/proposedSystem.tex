@@ -1,5 +1,5 @@
 \section{Proposed System}
-The proposed \textbf{Digital Logic Suite} is a modular, extensible CLI application written in C++. It supports parsing Boolean expressions, generating truth tables, Karnaugh map minimization, circuit simulation, and Graphviz-based visualization. The system is designed for ease of use, extensibility, and integration into academic workflows.
+The proposed \textbf{Digital Logic Suite} is a modular, extensible CLI application written in C++. It supports parsing Boolean expressions, generating truth tables, Karnaugh map minimization, circuit simulation, and Graphviz-based visualization. The system is designed for ease of use, and integration into non-GUI (CLI) environments.
 
 \vspace{0.5em}
 
@@ -7,11 +7,11 @@ The proposed \textbf{Digital Logic Suite} is a modular, extensible CLI applicati
 The suite consists of several core modules:
 \begin{itemize}
     \item \textbf{CLI Module:} Handles user input, command parsing, and help documentation.
-    \item \textbf{Expression Parser:} Parses and evaluates Boolean expressions using recursive descent or shunting yard algorithms.
+    \item \textbf{Expression Parser:} Parses and evaluates Boolean expressions.
     \item \textbf{Truth Table Generator:} Produces truth tables for given expressions.
     \item \textbf{Karnaugh Map Minimizer:} Simplifies Boolean expressions using K-map techniques.
     \item \textbf{Circuit Simulator:} Simulates logic circuits based on parsed expressions.
-    \item \textbf{Graphviz Visualizer:} Generates .dot files and invokes Graphviz to visualize logic circuits and truth tables.
+    \item \textbf{Graphviz Visualizer:} Generates .dot files and uses Graphviz to visualize logic circuits and truth tables.
 \end{itemize}
 The suite is implemented using C++ OOP concepts, with each module encapsulated as a class or set of classes.
 
