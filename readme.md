@@ -55,4 +55,4 @@ The Digital Logic Suite is an academic project designed to provide a comprehensi
 
 - **Nabaraj Bhandari**
 - **Nikunj Bhusal**
-- **Dhiraj Shreshta**
+- **Nirdesh Joshi**

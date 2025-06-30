@@ -1,18 +1,11 @@
 \documentclass[a4paper,12pt]{article}
 
-% --- Packages ---
+% --- Encoding and Fonts ---
 \usepackage[utf8]{inputenc}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{fancyhdr}
 \usepackage{mathptmx} % Times New Roman font
-\usepackage{titlesec}
-\usepackage{array}
-\usepackage{caption}
 
-% --- Geometry: Margins ---
+% --- Page Layout ---
+\usepackage{geometry}
 \geometry{
     a4paper,
     left=1.5in,
@@ -24,18 +17,24 @@
     footskip=0.5in
 }
 
-% --- Line Spacing ---
+% --- Graphics and Tables ---
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{caption}
+
+% --- Formatting and Spacing ---
+\usepackage{setspace}
 \setstretch{1.5}
 
-% --- Header & Footer ---
+% --- Header, Footer, and Section Titles ---
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\fancyhead[L]{Digital Logic Suite Proposal}
+\fancyhead[L]{Digital Logic Suite}
+\fancyhead[R]{Project Proposal}
 \fancyfoot[C]{\thepage}
 
-% --- Section Title Formatting ---
+\usepackage{titlesec}
 \titleformat{\section}
   {\normalfont\bfseries\fontsize{18}{22}\selectfont}{\thesection}{1em}{}
 \titleformat{\subsection}
@@ -45,7 +44,8 @@
 \titleformat{\paragraph}[runin]
   {\normalfont\bfseries\fontsize{13}{15}\selectfont}{\theparagraph}{1em}{}
 
-% --- Hyperref Setup ---
+% --- Hyperlinks ---
+\usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -55,140 +55,30 @@
     pdfsubject={Project Proposal}
 }
 
-% --- Customizing Table of Contents ---
+% --- Table of Contents ---
 \renewcommand{\contentsname}{Table of Contents}
 
-% --- Document Start ---
+% --- Document ---
 \begin{document}
 
-% --- Title Page ---
-% Title page
-\include{sections/title} % Ensure titlepage.tex exists
+\include{sections/titlePage}
 \clearpage
 
-% --- Acknowledgment ---
-\section*{Acknowledgment}
+\include{sections/acknowledgement}
+\clearpage
 
-We would like to express our sincere gratitude to our supervisor, \textbf{Mr. Daya Sagar Baral}, Faculty Member, Department of Electronics and Computer Engineering, IOE Pulchowk Campus, for his continuous guidance, invaluable suggestions, and encouragement throughout the development of this project.
-
-This project, \textbf{Digital Logic Suite}, has been carried out as part of the subject \textbf{Object-Oriented Programming with C++}, and it would not have been possible without the support provided by our supervisor. His expertise and insights have greatly contributed to the successful design and implementation of this project.
-
-We would also like to acknowledge the Department of Electronics and Computer Engineering at Pulchowk Campus for providing the resources and environment necessary for the completion of this work.
-
-\newpage
-
-% --- Table of Contents ---
 \tableofcontents
-\newpage
+\clearpage
 
-% --- Introduction ---
-\section{Introduction}
-Digital logic design is fundamental to computer engineering and electronics. The Digital Logic Suite aims to provide a comprehensive, command-line-based toolkit for parsing and evaluating Boolean expressions, generating truth tables, minimizing logic using Karnaugh maps, simulating digital circuits, and visualizing logic structures. The suite uses C++ object-oriented programming concepts and integrates with Graphviz for graphical representation.
+\input{sections/introduction}
+\input{sections/objectives}
+\input{sections/existingSystems}
+\input{sections/proposedSystem}
+\input{sections/methodology}
+\input{sections/projectScope}
+\clearpage
 
-% --- Objectives ---
-\section{Objectives}
-\renewcommand{\labelenumi}{\roman{enumi}.}
-\begin{enumerate}
-    \item Develop a powerful CLI tool for digital logic analysis and simulation.
-    \item Implement Boolean expression parsing and evaluation.
-    \item Generate truth tables for arbitrary Boolean expressions.
-    \item Perform Karnaugh map minimization for logic simplification.
-    \item Simulate digital circuits based on user-defined logic.
-    \item Visualize logic circuits and truth tables using Graphviz.
-    \item Demonstrate use of OOP principles using C++.
-\end{enumerate}
-
-
-% --- Existing System (if any) ---
-\section{Existing Systems}
-Several existing tools provide digital logic design, analysis, and simulation functionalities. Some notable systems include:
-\renewcommand{\labelenumi}{\roman{enumi}.}
-\begin{enumerate}
-    \item \textbf{Logisim}: A user-friendly interface for building digital logic systems but lacks command-line capabilities.
-
-    \item \textbf{Digital Works}: Supports circuit construction and basic simulation, but does not provide features for Boolean expression parsing or Karnaugh map minimization.
-
-    \item \textbf{Logic Friday}: A Windows-based application for simplifying and analyzing Boolean equations, generating truth tables, and Karnaugh maps but, limited to a GUI environment.
-\end{enumerate}
-
-Despite the availability of these tools, there is a lack of a lightweight, extensible, command-line-based tool designed specifically for learning, experimenting with, and automating digital logic analysis. This gap inspired us for the development of \textbf{Digital Logic Suite} project.
-
-
-% --- Proposed System ---
-\section{Proposed System}
-The proposed Digital Logic Suite is a modular, extensible CLI application written in C++. It supports parsing Boolean expressions, generating truth tables, Karnaugh map minimization, circuit simulation, and Graphviz-based visualization. The system is designed for ease of use, extensibility, and integration into academic workflows.
-
-% --- Description ---
-\subsection{Description}
-The suite consists of several core modules:
-\begin{itemize}
-    \item \textbf{CLI Module:} Handles user input, command parsing, and help documentation.
-    \item \textbf{Expression Parser:} Parses and evaluates Boolean expressions using recursive descent or shunting yard algorithms.
-    \item \textbf{Truth Table Generator:} Produces truth tables for given expressions.
-    \item \textbf{Karnaugh Map Minimizer:} Simplifies Boolean expressions using K-map techniques.
-    \item \textbf{Circuit Simulator:} Simulates logic circuits based on parsed expressions.
-    \item \textbf{Graphviz Visualizer:} Generates .dot files and invokes Graphviz to visualize logic circuits and truth tables.
-\end{itemize}
-The suite is implemented using C++ OOP concepts, with each module encapsulated as a class or set of classes.
-
-% --- System Block Diagram ---
-\subsection{System Block Diagram}
-\begin{figure}[ht!]
-    \centering
-    % Placeholder for system block diagram
-    % \includegraphics[width=0.9\textwidth]{images/system_block_diagram.png}
-    \fbox{\parbox{0.9\textwidth}{\centering System Block Diagram Placeholder}}
-    \caption{System Block Diagram: CLI $\rightarrow$ Expression Parser $\rightarrow$ Truth Table Generator $\rightarrow$ Circuit Simulator $\rightarrow$ Graphviz Visualizer}
-    % Replace the placeholder image with the actual diagram as the project progresses.
-\end{figure}
-
-% --- Methodology ---
-\section{Methodology}
-The project will follow an iterative, modular development approach:
-\begin{enumerate}
-    \item Requirements analysis and system design.
-    \item Implementation of core modules (expression parser, truth table generator).
-    \item Integration of minimization and simulation features.
-    \item Development of CLI and user documentation.
-    \item Testing, debugging, and optimization.
-    \item Integration with Graphviz for visualization.
-\end{enumerate}
-
-% --- Project Scope ---
-\section{Project Scope}
-The Digital Logic Suite is intended for academic and educational use. It focuses on combinational logic analysis, minimization, and simulation. Sequential logic and hardware synthesis are outside the current scope but may be considered for future extensions.
-
-% --- Project Schedule ---
-\newpage
-\section{Project Schedule}
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|>{\raggedright}p{2cm}|p{10cm}|}
-        \hline
-        \textbf{Week} & \textbf{Planned Activities}                                   \\
-        \hline
-        Week 1        & Requirements gathering, literature review, and system design. \\
-        \hline
-        Week 2        & Implementation of CLI and Boolean expression parser.          \\
-        \hline
-        Week 3        & Truth table generation and Karnaugh map minimization modules. \\
-        \hline
-        Week 4        & Circuit simulation and Graphviz visualization integration.    \\
-        \hline
-        Week 5        & Testing, documentation, and final report preparation.         \\
-        \hline
-    \end{tabular}
-    \caption{Project Schedule for Digital Logic Suite}
-\end{table}
-
-
-% --- Libraries and Tools ---
-\section{Libraries and Tools}
-\begin{itemize}
-    \item \textbf{C++ Standard Template Library (STL):} Data structures and algorithms.
-    \item \textbf{Graphviz:} Visualization of logic circuits and truth tables.
-    \item \textbf{Visual Studio:} Development environment.
-    \item \textbf{Git:} Version control and collaboration.
-\end{itemize}
+\input{sections/projectSchedule}
+\input{sections/librariesAndTools}
 
 \end{document}
