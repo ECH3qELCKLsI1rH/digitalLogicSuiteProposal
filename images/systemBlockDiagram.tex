@@ -1,5 +1,7 @@
+\begin{figure}[h]
+\centering
 \begin{tikzpicture}[
-  node distance=1.8cm and 3.5cm,
+  node distance=1.8cm and 4.5cm,
   box/.style={
     draw,
     rounded corners,
@@ -22,20 +24,21 @@
 
 % Third row
 \node[box, below=of kmap] (sim) {Circuit \\ Simulator};
-\node[box, right=of sim] (viz) {Graphviz \\ Visualize};
+\node[box, right=of sim] (viz) {Graphviz \\ Visualizer};
 
 % Fourth row: center below sim and viz
-\node[box] (cd) at ($(sim)!0.5!(viz) - (0,2.2)$) {Generated \\ Circuit \\ Diagram};
+\node[box] (cd) at ($(sim)!0.5!(viz) + (0,-2.5)$) {Generated \\ Circuit \\ Diagram};
 
 % Arrows with labels
 \draw (cli) -- node[midway, above] {\small User Input} (parser);
-\draw (parser) -- node[midway, right] {\small Parsed Expression} (ttg);
-\draw (ttg) -- node[midway, above] {\small Truth Table Generator} (kmap);
-\draw (kmap) -- node[midway, left] {\small Minimized Expression} (sim);
+\draw (parser) -- node[midway, left] {\small Parsed Expression} (ttg);
+\draw (ttg) -- node[midway, above] {\small Generated Truth Table} (kmap);
+\draw (kmap) -- node[midway, right] {\small Minimized Expression} (sim);
 \draw (sim) -- node[midway, above] {\small Simulated Circuit} (viz);
 
-% Arrows to centered last node
-% \draw (viz) -- ($(cd.north east)+(-0.2,0)$);
-\draw (viz) |- ($(cd.north east)+(-0.2,0)$);
+\draw[->] (viz.south) -- ++(0,-0.5) -- ++(-3.86,0) -- (cd.north);
+
 
 \end{tikzpicture}
+\caption{System Block Diagram of Digital Logic Suite}
+\end{figure}
