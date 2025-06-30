@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+  node distance=1.8cm and 3.5cm,
+  box/.style={
+    draw,
+    rounded corners,
+    minimum width=3.2cm,
+    minimum height=1.2cm,
+    align=center,
+    fill=blue!5,
+    thick
+  },
+  ->, >=Stealth
+]
+
+% First row
+\node[box] (cli) {Command \\ Line \\ Interface};
+\node[box, right=of cli] (parser) {Expression \\ Parser};
+
+% Second row
+\node[box, below=of parser] (ttg) {Truth Table \\ Generator};
+\node[box, left=of ttg] (kmap) {K-map \\ Minimizer};
+
+% Third row
+\node[box, below=of kmap] (sim) {Circuit \\ Simulator};
+\node[box, right=of sim] (viz) {Graphviz \\ Visualize};
+
+% Fourth row: center below sim and viz
+\node[box] (cd) at ($(sim)!0.5!(viz) - (0,2.2)$) {Generated \\ Circuit \\ Diagram};
+
+% Arrows with labels
+\draw (cli) -- node[midway, above] {\small User Input} (parser);
+\draw (parser) -- node[midway, right] {\small Parsed Expression} (ttg);
+\draw (ttg) -- node[midway, above] {\small Truth Table Generator} (kmap);
+\draw (kmap) -- node[midway, left] {\small Minimized Expression} (sim);
+\draw (sim) -- node[midway, above] {\small Simulated Circuit} (viz);
+
+% Arrows to centered last node
+% \draw (viz) -- ($(cd.north east)+(-0.2,0)$);
+\draw (viz) |- ($(cd.north east)+(-0.2,0)$);
+
+\end{tikzpicture}
