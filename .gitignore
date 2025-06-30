@@ -10,6 +10,7 @@
 *.synctex.gz
 *.bbl
 *.blg
+*.synctex.gz
 
 # Build directories
 build/
