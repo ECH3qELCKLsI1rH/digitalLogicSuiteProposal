@@ -1,7 +1,20 @@
 \section{Introduction}
 
-Digital logic design is fundamental to both electronics and computer engineering. \textbf{Digital Logic Suite} aims to provide a comprehensive, command-line-based toolkit for parsing and evaluating Boolean expressions, generating truth tables, minimizing logic using Karnaugh maps, simulating digital circuits, and visualizing logic structures.
+Digital logic design is one of the most important foundations in electronics and computer engineering. It helps us create digital systems that are used everywhere—from calculators and computers to advanced embedded devices in cars and robots. Understanding digital logic is necessary for designing reliable and efficient circuits.
 
-\vspace{0.5em}
+However, many students and professionals struggle with analyzing and simplifying complex Boolean expressions by hand. This often leads to mistakes or wasted time. Existing tools mostly focus on graphical interfaces, which can be useful but also have limitations. They do not always allow easy automation or integration with other programs, and sometimes they need heavy software installation or powerful computers to run smoothly.
 
-The suite uses C++ object-oriented programming concepts and integrates with Graphviz for graphical representation.
+To solve these problems, we propose the \textbf{Digital Logic Suite}, a command-line-based toolkit designed for analyzing, minimizing, simulating, and visualizing digital logic. This tool allows users to:
+\begin{itemize}
+    \item Write Boolean expressions directly in the terminal,
+    \item Generate truth tables automatically,
+    \item Minimize expressions using Karnaugh maps,
+    \item Simulate logic circuits without needing a graphical user interface (GUI),
+    \item And create visual diagrams of circuits and truth tables using Graphviz.
+\end{itemize}
+
+This suite will help students and professionals by making digital logic analysis faster, easier, and more flexible. It will also encourage a deeper understanding of logical operations by letting users experiment directly with their expressions. Because it runs on the command line, it can work on many systems—including older computers and remote servers—without the need for a GUI.
+
+Another important goal of this project is to \textbf{demonstrate object-oriented programming (OOP) principles using C++}. By dividing the tool into separate modules, each represented by a class, we will show how OOP can make programs easier to build, understand, and extend in the future. Our suite will be modular, so new features like sequential circuit analysis or timing simulation can be added later without changing the core system.
+
+In summary, the Digital Logic Suite aims to fill the gap left by existing tools by providing a lightweight, extensible, and user-friendly CLI-based solution for digital logic design and learning.

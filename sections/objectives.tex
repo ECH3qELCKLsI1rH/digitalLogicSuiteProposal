@@ -1,11 +1,31 @@
 \section{Objectives}
-\renewcommand{\labelenumi}{\roman{enumi}.}
+
+The main goal of the Digital Logic Suite is to create a practical and easy-to-use command-line tool that helps students, teachers, and engineers analyze, simplify, and understand digital logic circuits. Our objectives are:
+
 \begin{enumerate}
-  \item Develop a powerful CLI tool for digital logic analysis and simulation.
-  \item Implement Boolean expression parsing and evaluation.
-  \item Generate truth tables for arbitrary Boolean expressions.
-  \item Perform Karnaugh map minimization for logic simplification.
-  \item Simulate digital circuits based on user-defined logic.
-  \item Visualize logic circuits and truth tables using Graphviz.
-  \item Demonstrate use of OOP principles using C++.
+  \item \textbf{Develop a powerful command-line interface (CLI) tool} \\
+        Build a flexible CLI application that allows users to input commands easily, see helpful instructions, and understand errors clearly. The CLI will make it possible to use the tool on any system, including those without a graphical user interface.
+
+  \item \textbf{Implement a robust Boolean expression parser and evaluator} \\
+        Create a module that can read, understand, and calculate the output of Boolean expressions written by the user. The parser should handle common operators such as AND, OR, NOT, NAND, NOR, XOR, and XNOR, including nested parentheses and operator precedence.
+
+  \item \textbf{Generate detailed truth tables for arbitrary Boolean expressions} \\
+        Develop a truth table generator that automatically calculates and displays the complete truth table for any given Boolean expression, showing how outputs change based on different inputs.
+
+  \item \textbf{Perform Karnaugh map (K-map) minimization} \\
+        Build a K-map module to simplify Boolean expressions by grouping minterms or maxterms. The module will also show each step of the simplification process to help users learn how K-maps work.
+
+  \item \textbf{Simulate digital circuits based on user-defined logic} \\
+        Implement a simulation engine that evaluates logic circuits described by Boolean expressions. It should process user inputs and provide immediate outputs, helping users verify circuit behavior before hardware implementation.
+
+  \item \textbf{Visualize logic circuits and truth tables using Graphviz} \\
+        Integrate with Graphviz to generate graphical representations of truth tables, logic gates, and simplified circuits, so users can easily visualize their logical designs.
+
+  \item \textbf{Demonstrate object-oriented programming (OOP) concepts in C++} \\
+        Apply OOP principles by designing the suite with classes and objects. This will show how OOP can make software easier to maintain, extend, and understand, especially in engineering applications.
+
+  \item \textbf{Provide a modular and extensible system} \\
+        Design the suite so that new features, like sequential circuit analysis or support for memory elements (flip-flops, latches), can be added later without requiring major changes to the existing system.
 \end{enumerate}
+
+By achieving these objectives, we aim to create a CLI-based toolkit that makes learning, practicing, and applying digital logic design concepts simpler, faster, and more effective.
